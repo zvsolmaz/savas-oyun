@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="koüpro" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/koüpro" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/koüpro" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../../libcurl/curl-8.10.1_5-win64-mingw/include" />
+			<Add directory="../../dll/raylib-5.0_win64_mingw-w64/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-lcurl" />
+			<Add option="-lraylib" />
+			<Add option="-lgdi32" />
+			<Add option="-lopengl32" />
+			<Add option="-lwinmm" />
+			<Add library="raylib" />
+			<Add library="curl" />
+			<Add library="opengl32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="ws2_32" />
+			<Add library="m" />
+			<Add directory="../../libcurl/curl-8.10.1_5-win64-mingw/lib" />
+			<Add directory="../../dll/raylib-5.0_win64_mingw-w64/lib" />
+		</Linker>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
